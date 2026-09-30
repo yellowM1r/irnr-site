@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Подача на гражданство — ИРНР</title>
+<meta name="description" content="Заявление на гражданство Израильской Ростовской Народной Республики — вымышленный государственный проект.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="application-page">
+<header class="top">
+  <div class="brand"><div class="flag">✡</div><div><b>ИРНР</b><small>Израильская Ростовская Народная Республика</small></div></div>
+  <a class="back-link" href="index.html">← Вернуться на портал</a>
+</header>
+<main class="application-wrap">
+  <div class="application-card">
+    <div class="eyebrow">Государственная услуга · отдел гражданства</div>
+    <h1>Подать заявление<br>на гражданство ИРНР</h1>
+    <p class="intro">Заполните анкету ниже. После отправки заявление поступит в подключённую систему Formspree. Владелец портала сможет получать уведомления по электронной почте и/или в личные сообщения Telegram через интеграцию Formspree.</p>
+    <!-- ВАЖНО: после создания формы в Formspree замени URL action ниже на свой endpoint. -->
+    <form action="https://formspree.io/f/xljdvork" method="POST">
+      <input type="hidden" name="subject" value="Новое заявление на гражданство ИРНР">
+      <div class="form-grid">
+        <div class="form-field"><label for="first_name">Имя <span class="required">*</span></label><input id="first_name" name="Имя" type="text" autocomplete="given-name" required></div>
+        <div class="form-field"><label for="last_name">Фамилия <span class="required">*</span></label><input id="last_name" name="Фамилия" type="text" autocomplete="family-name" required></div>
+        <div class="form-field"><label for="patronymic">Отчество</label><input id="patronymic" name="Отчество" type="text" autocomplete="additional-name"></div>
+        <div class="form-field"><label for="birth_date">Дата рождения</label><input id="birth_date" name="Дата рождения" type="date" autocomplete="bday"></div>
+        <div class="form-field"><label for="citizenship">Текущее гражданство <span class="required">*</span></label><input id="citizenship" name="Текущее гражданство" type="text" required></div>
+        <div class="form-field"><label for="country">Страна проживания</label><input id="country" name="Страна проживания" type="text" autocomplete="country-name"></div>
+        <div class="form-field"><label for="email">E-mail <span class="required">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="form-field"><label for="telegram">Telegram</label><input id="telegram" name="Telegram" type="text" placeholder="@username" autocomplete="off"></div>
+        <div class="form-field full"><label for="reason">Почему вы хотите получить гражданство ИРНР? <span class="required">*</span></label><textarea id="reason" name="Причина подачи" required placeholder="Расскажите в свободной форме..."></textarea></div>
+        <div class="form-field full"><label for="about">Дополнительная информация</label><textarea id="about" name="Дополнительная информация" placeholder="Интересы, навыки, предложения для республики и т. п."></textarea></div>
+      </div>
+      <div class="form-note">Это форма для вымышленного государственного проекта. Не отправляйте сюда пароли, данные банковских карт или другие сведения, которые не нужны для рассмотрения заявления.</div>
+      <label class="consent"><input type="checkbox" name="Согласие" value="Я согласен на обработку данных для рассмотрения заявления" required><span>Я согласен на обработку указанных мной данных исключительно для рассмотрения заявления в рамках этого вымышленного проекта. <span class="required">*</span></span></label>
+      <div class="form-actions"><button class="submit-btn" type="submit">Отправить заявление</button><a class="back-link" href="index.html">Отмена</a></div>
+      <div class="form-config">Техническая настройка: endpoint Formspree указывается в атрибуте <b>action</b> этой формы.</div>
+    </form>
+  </div>
+</main>
+<footer><b>ИРНР</b><span>© 2026 · Вымышленный государственный проект</span></footer>
+</body>
+</html>
