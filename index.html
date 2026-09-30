@@ -10,7 +10,7 @@
 </head>
 <body>
 <header class="top">
-  <div class="brand"><div class="flag">✡</div><div><b>ИРНР</b><small>Израильская Ростовская Народная Республика</small></div></div>
+  <div class="brand"><div class="flag"><img src="irnr_flag.svg" alt="Флаг ИРНР" id="flagLogo"></div><div><b>ИРНР</b><small>Израильская Ростовская Народная Республика</small></div></div>
   <button class="menu-btn">☰</button>
   <nav>
     <a href="#home">Главная</a><a href="#news">Новости</a><a href="#politics">Политика</a><a href="#foreign">МИД</a>
@@ -20,6 +20,7 @@
 
 <main>
 <section id="home" class="hero">
+  <div class="hero-flag"><img src="irnr_flag.svg" alt="Флаг Израильской Ростовской Народной Республики"></div>
   <div><div class="eyebrow">Официальный государственный портал · июль 2026</div>
   <h1>Израильская<br><span>Ростовская</span><br>Народная Республика</h1>
   <p>Государственный информационный портал вымышленной республики: новости, власть, дипломатия, право, граждане и национальная валюта.</p>
@@ -60,14 +61,21 @@
 <div><b>Статья 7.</b><p>Изменения Конституции вступают в силу после утверждения верховным правителем.</p></div>
 </div></section>
 
-<section id="citizens" class="section alt"><div class="head"><div><div class="eyebrow">Население</div><h2>Граждане</h2></div><span class="pill">1 гражданин</span></div>
-<div class="citizen"><div class="avatar">КМ</div><div><span>Гражданин №001 · Верховный правитель</span><h3>Казаков Мирослав Михайлович</h3><p>Единственный зарегистрированный гражданин в текущей версии государственного лора.</p></div></div></section>
+<section id="citizens" class="section alt"><div class="head"><div><div class="eyebrow">Население</div><h2>Граждане</h2></div><span class="pill">2 гражданина</span></div>
+<div class="citizen-list">
+<div class="citizen"><div class="avatar">КМ</div><div><span>Гражданин №001 · Верховный правитель</span><h3>Казаков Мирослав Михайлович</h3><p>Верховный правитель ИРНР.</p></div></div>
+<div class="citizen"><div class="citizen-photo"><img src="bogdan.png" alt="Фото гражданина Богдана Афоничева"></div><div><span>Гражданин №002 · Посол Украины</span><h3>Афоничев Богдан Евгениевич</h3><p>Посол Украины при ИРНР согласно государственному лору.</p></div></div>
+</div></section>
 
 <section id="exchange" class="section"><div class="head"><div><div class="eyebrow">Финансовая система</div><h2>Обменник</h2></div></div>
 <div class="exchange"><div class="rate">1 USD <span>=</span> 800 000 RH</div><p>Условный курс, установленный в рамках лора ИРНР в июле 2026 года.</p>
 <div class="converter"><label>USD<input id="usd" type="number" value="1" min="0" step="any"></label><b>→</b><label>RH<input id="rh" type="number" value="800000" min="0" step="any"></label></div></div></section>
 </main>
 
-<footer><b>ИРНР</b><span>© 2026 · Вымышленный государственный проект</span></footer>
+<footer>
+  <div class="footer-main"><b>ИРНР</b><span>© 2026 · Вымышленный государственный проект</span></div>
+  <div class="footer-links"><span>Связь: <a href="mailto:pwgood_top@mail.ru">pwgood_top@mail.ru</a></span><span>Соцсети: <a href="https://t.me/bnetanyahu" target="_blank" rel="noopener">Telegram Нетаньяху</a> · <a href="https://t.me/israelinrussian" target="_blank" rel="noopener">Израиль по-русски</a></span><span>Спонсор: <a href="https://t.me/V_Zelenskiy_official" target="_blank" rel="noopener">Zelenskiy / Official</a></span></div>
+  <div class="easter-egg" id="easterEgg">✦ Вы нашли секретный архив ИРНР. Руханд принят к обращению.</div>
+</footer>
 <script src="script.js"></script>
 </body></html>
