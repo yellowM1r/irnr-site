@@ -1,12 +1,10 @@
-ИРНР — государственный портал ролевого/юмористического проекта
+IRNR SITE — 1 OCTOBER 2026
 
-Сайт оформлен как официальный портал государства. Страница «О проекте» отдельно поясняет, что это шутка и художественный ролевой сеттинг.
+Static fictional government portal for the Israeli Rostov People's Republic.
 
-Файлы: index.html, index-en.html, application.html, application-en.html, about.html, about-en.html, style.css, script.js, bogdan.png, irnr_flag.png.
+Currency:
+1 USD = 850 dubles
+1 duble = 100 RHD
+1 USD = 85,000 RHD
 
-ПОДАЧА НА ГРАЖДАНСТВО
-Formspree endpoint: https://formspree.io/f/xljdvork
-Кнопка на главной открывает application.html; английская версия — application-en.html.
-
-ОБНОВЛЕНИЕ САЙТА
-Изменяйте HTML/CSS/JS и загружайте изменённые файлы в корень GitHub-репозитория с Commit changes. GitHub Pages публикует статические файлы из репозитория.
+The website is a fictional role-play project and has no real legal effect.
