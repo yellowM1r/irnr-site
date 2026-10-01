@@ -22,9 +22,9 @@
       bogdan:{id:'bogdan',series:'7355',number:'856370',surname:'Афоничев',name:'Богдан',patronymic:'Евгениевич',dob:'2012-09-06',role:'Посол Украины',citizenNo:'002',issuedBy:'Верховным Господином Казаковым Мирославом Михайловичем',education:false,health:false}
     },
     getAccount(series,number){const norm=v=>String(v??'').replace(/\s+/g,'').trim();return Object.values(this.accounts).find(a=>norm(a.series)===norm(series)&&norm(a.number)===norm(number))||null},
-    setSession(a){localStorage.setItem('irnr-session',a.id)},
-    session(){const id=localStorage.getItem('irnr-session');return id?this.accounts[id]||null:null},
-    logout(){localStorage.removeItem('irnr-session')},
+    setSession(a){localStorage.setItem('irnr-session',a.id);localStorage.setItem('irnr-session-series',a.series);localStorage.setItem('irnr-session-number',a.number)},
+    session(){const id=localStorage.getItem('irnr-session');const a=id?this.accounts[id]||null:null;if(!a){this.logout();return null}return a},
+    logout(){localStorage.removeItem('irnr-session');localStorage.removeItem('irnr-session-series');localStorage.removeItem('irnr-session-number')},
     addMessage(message){const list=JSON.parse(localStorage.getItem('irnr-mailbox')||'[]');list.unshift({...message,id:Date.now()});localStorage.setItem('irnr-mailbox',JSON.stringify(list))},
     messages(){return JSON.parse(localStorage.getItem('irnr-mailbox')||'[]')},
     bordersOpen(){return localStorage.getItem('irnr-borders')==='open'},
