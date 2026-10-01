@@ -21,7 +21,7 @@
       admin:{id:'kazakov',series:'0228',number:'169528',surname:'Казаков',name:'Мирослав',patronymic:'Михайлович',dob:'',role:'Верховный Господин / верховный правитель',citizenNo:'001',issuedBy:'Верховным Господином Казаковым Мирославом Михайловичем',education:false,health:false},
       bogdan:{id:'bogdan',series:'7355',number:'856370',surname:'Афоничев',name:'Богдан',patronymic:'Евгениевич',dob:'2012-09-06',role:'Посол Украины',citizenNo:'002',issuedBy:'Верховным Господином Казаковым Мирославом Михайловичем',education:false,health:false}
     },
-    getAccount(series,number){return Object.values(this.accounts).find(a=>a.series===String(series).trim()&&a.number===String(number).trim())||null},
+    getAccount(series,number){const norm=v=>String(v??'').replace(/\s+/g,'').trim();return Object.values(this.accounts).find(a=>norm(a.series)===norm(series)&&norm(a.number)===norm(number))||null},
     setSession(a){localStorage.setItem('irnr-session',a.id)},
     session(){const id=localStorage.getItem('irnr-session');return id?this.accounts[id]||null:null},
     logout(){localStorage.removeItem('irnr-session')},
