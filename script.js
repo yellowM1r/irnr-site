@@ -9,9 +9,9 @@
   document.querySelector('.menu-btn')?.addEventListener('click',()=>document.querySelector('.top')?.classList.toggle('open'));
   document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.top')?.classList.remove('open')));
 
-  const rub=document.getElementById('rub'), rh=document.getElementById('rh');
-  rub?.addEventListener('input',()=>{const v=Number(rub.value); if(rh) rh.value=Number.isFinite(v)?(v*100).toLocaleString('ru-RU'):''});
-  rh?.addEventListener('input',()=>{const v=Number(rh.value.replace(/\s/g,'')); if(rub) rub.value=Number.isFinite(v)?(v/100).toFixed(2):''});
+  const usd=document.getElementById('usd'), usdDubl=document.getElementById('usdDubl');
+  usd?.addEventListener('input',()=>{const v=Number(usd.value); if(usdDubl) usdDubl.value=Number.isFinite(v)?(v*850).toLocaleString('ru-RU'):''});
+  usdDubl?.addEventListener('input',()=>{const v=Number(usdDubl.value.replace(/\s/g,'')); if(usd) usd.value=Number.isFinite(v)?(v/850).toFixed(2):''});
   const dubl=document.getElementById('dubl'), rhDubl=document.getElementById('rhDubl');
   dubl?.addEventListener('input',()=>{const v=Number(dubl.value); if(rhDubl) rhDubl.value=Number.isFinite(v)?(v/10).toLocaleString('ru-RU'):''});
   rhDubl?.addEventListener('input',()=>{const v=Number(rhDubl.value.replace(/\s/g,'')); if(dubl) dubl.value=Number.isFinite(v)?(v*10).toFixed(0):''});
